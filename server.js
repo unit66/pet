@@ -1,11 +1,10 @@
 const express = require('express');
+const general = require('./routes/general')
 
 const app = express();
 
-app.get('/', function(req, res){
-  res.send('Hello API');
-})
+app.use('/', general);
 
-app.listen(3012, function() {
-  console.log('Api app started');
+app.listen(666, function() {
+  console.log('Express Server started');
 })
