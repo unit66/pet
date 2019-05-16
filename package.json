@@ -1,0 +1,30 @@
+{
+  "name": "ongoing-pet-project",
+  "version": "1.0.0",
+  "description": "express+react+vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unit66/pet.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "react",
+    "redux",
+    "vue",
+    "vuex"
+  ],
+  "author": "unit66",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unit66/pet/issues"
+  },
+  "homepage": "https://github.com/unit66/pet#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
