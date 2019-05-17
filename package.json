@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "express+react+vue",
   "scripts": {
-    "server-start": "node --expose-gc ./server.js",
     "start": "node server.js"
   },
   "engines": {
