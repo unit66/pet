@@ -29,6 +29,7 @@
   "homepage": "https://github.com/unit66/pet#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "serve-favicon": "^2.5.0"
   }
 }
