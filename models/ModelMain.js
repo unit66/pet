@@ -1,13 +1,15 @@
 'use strict'
 
 class ModelMain {
-  constructor() {
-    this.moduleName = 'general';
+  constructor(pool) {
+    this.pool = pool;
+    this.moduleName = 'main';
   }
 
-  async getHeader() {
+  async getData() {
     const header = `Welcome to ${this.moduleName} page`;
-    return header;
+    const data = await this.pool.collection('pet-collection').find().toArray();
+    return header + '</br>' + JSON.stringify(data);
   }
 }
 
