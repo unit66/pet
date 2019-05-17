@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "express+react+vue",
   "scripts": {
-    "server-start": "node --expose-gc ./server.js"
+    "server-start": "node --expose-gc ./server.js",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "engines": {
+    "node": "11.13.0"
   },
   "repository": {
     "type": "git",
