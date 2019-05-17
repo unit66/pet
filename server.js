@@ -2,9 +2,10 @@ const express = require('express');
 const general = require('./routes/general')
 
 const app = express();
+const port = process.env.PORT || 666;
 
 app.use('/', general);
 
-app.listen(8000, function() {
+app.listen(port, function() {
   console.log('Express Server started');
 })
