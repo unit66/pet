@@ -3,12 +3,15 @@ const general = require('./routes/general');
 const path = require('path');
 const favicon = require('serve-favicon');
 const MongoClient = require('mongodb').MongoClient;
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = process.env.PORT || 666;
 
 const uri = 'mongodb+srv://db_admin:admin1@clusterfuck-kwyqt.mongodb.net/pet-db?retryWrites=true';
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(favicon(path.join(__dirname, 'favicon.ico')));
 app.use('/', general);
 
