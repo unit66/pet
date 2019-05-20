@@ -10,14 +10,14 @@ router.get('/', async (req, res) => {
   res.send(data);
 });
 
-router.get('/api', async (req, res) => {
+router.get('/', async (req, res) => {
   const { pool } = req.app.locals;
   const mainData = new ModelMain(pool);
   const data = await mainData.getData();
   res.send(data);
 });
 
-router.post('/api', async (req, res) => {
+router.post('/', async (req, res) => {
   const { pool } = req.app.locals;
   const newData = `${Date.now()} obj`;
   const mainData = new ModelMain(pool);
@@ -25,7 +25,7 @@ router.post('/api', async (req, res) => {
   res.send(data);
 });
 
-router.put('/api/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   const { pool } = req.app.locals;
   const id = req.params.id;
   const newData = req.body.name;
@@ -35,7 +35,7 @@ router.put('/api/:id', async (req, res) => {
   res.send(data);
 });
 
-router.delete('/api/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   const { pool } = req.app.locals;
   const id = req.params.id;
   const mainData = new ModelMain(pool, id);
