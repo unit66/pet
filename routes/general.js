@@ -2,6 +2,14 @@ const express = require('express');
 const router = express.Router();
 const ModelMain = require('../models/ModelMain');
 
+//временная функция вывода, удалить!
+router.get('/', async (req, res) => {
+  const { pool } = req.app.locals;
+  const mainData = new ModelMain(pool);
+  const data = await mainData.getData();
+  res.send(data);
+});
+
 router.get('/api', async (req, res) => {
   const { pool } = req.app.locals;
   const mainData = new ModelMain(pool);
