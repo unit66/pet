@@ -1,0 +1,135 @@
+//NORMALIZE
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap&subset=cyrillic,cyrillic-ext');
+
+*{
+  font-family: 'Oswald', sans-serif !important;
+}
+
+body{
+  background: black;
+  color: white;
+}
+
+header{
+  width: 100vw;
+  height: 100px;
+  nav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+      margin-right: 4px;
+      background: #000;
+      font-size: 14px;
+      box-sizing: border-box;
+      height: 40px;
+      width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 400 !important;
+      color: white;
+      border: 2px solid white;
+      transform: skewX(25deg) translate(0,0);
+      transition: .5s;
+      &:nth-child(1){
+        z-index: 4;
+      }
+      &:nth-child(2){
+        z-index: 3;
+      }
+      &:nth-child(3){
+        z-index: 2;
+      }
+      &:nth-child(5){
+        z-index: 1;
+      }
+      &:before{
+        background: #000;
+        content: "";
+        position: absolute;
+        border: 2px solid #bebebe;
+        top: 10px;
+        left: -28px;
+        height: 102%;
+        width: 18px;
+        transition: .5s;
+        transform: skewY(-45deg);
+      }
+      &:after{
+        background: #000;
+        content: "";
+        position: absolute;
+        border: 2px solid #959595;
+        top: 36px;
+        left: 8px;
+        height: 80%;
+        width: 100px;
+        transition: .5s;
+        transform: rotate(45deg) skewY(-45deg);
+      }
+      &:hover{
+        transform: skewX(25deg) translate(-10px,15px);
+      }
+      &.active{
+        color: deeppink;
+        border: 2px solid deeppink;
+        transform: skewX(25deg) translate(-10px,15px);
+        &:after{
+          border: 2px solid #b41463;
+        }
+        &:before{
+          border: 2px solid #e51488;
+        }
+      }
+    }
+  }
+}

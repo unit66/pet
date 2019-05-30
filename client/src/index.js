@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Application from './Application';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import './scss/style.scss'
 
 const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
