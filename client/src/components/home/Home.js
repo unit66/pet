@@ -3,7 +3,8 @@ import React from 'react';
 export default function Home() {
   return (
     <section className="home">
-      <h1>Home page</h1>
+      <p>Sup! My name is Arseniy and i`m JavaScript developer.</p>
+      <p>You are now visiting my pet-project page.</p>
     </section>
   );
 }

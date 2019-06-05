@@ -61,6 +61,7 @@ body{
 header{
   width: 100vw;
   height: 100px;
+  margin-bottom: 50px;
   nav{
     height: 100%;
     display: flex;
@@ -278,6 +279,31 @@ footer{
         transform: translateY(-150px);
         opacity: 0;
       }
+    }
+  }
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .home, .p404{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+  .p404{
+    h1{
+      font-size: 40px;
+    }
+    a{
+      text-decoration: none;
+      color: deeppink;
     }
   }
 }
