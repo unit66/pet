@@ -49,6 +49,9 @@ table {
 *{
   font-family: 'Oswald', sans-serif !important;
 }
+.material-icons{
+  font-family: 'Material Icons' !important;
+}
 
 body{
   background: black;
@@ -63,6 +66,74 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translateY(0px);
+    transition: .5s;
+    &.mobile.hidden{
+      transform: translateX(300px);
+      transition: .5s;
+      div.burger{
+        transform: translate(-200px, 10px);
+        transition: .5s;
+        div{
+          transition: .5s;
+          background: deeppink;
+        }
+      }
+    }
+    &.mobile{
+      transform: translateX(0px);
+      transition: .5s;
+      display: none;
+      flex-direction: column;
+      justify-content: start;
+      width: 250px;
+      height: 100vh;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: deeppink;
+      background: linear-gradient(to bottom, deeppink 0%,#000000 90%);
+      div.burger{
+        transform: translate(100px, 10px);
+        transition: .5s;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 30px;
+        height: 30px;
+        div{
+          transition: .5s;
+          width: 8px;
+          height: 8px;
+          margin: 1px;
+          background: #000;
+        }
+        div:nth-child(2n){
+          background: deeppink;
+        }
+      }
+      a{
+        color: black;
+        border-color: black;
+        background: none;
+        margin-top: 20px;
+      }
+      a.active{
+        color: deeppink;
+        border-color: black;
+        background: black;
+        filter: none;
+        transform: skewX(25deg) translate(0px,0);
+      }
+      a:hover{
+        transform: skewX(25deg) translate(-30px,0);
+      }
+      a:before{
+        display: none;
+      }
+      a:after{
+        display: none;
+      }
+    }
     a{
       margin-right: 4px;
       background: #000;
@@ -78,6 +149,7 @@ header{
       font-weight: 400 !important;
       color: white;
       border: 2px solid white;
+      will-change: transform;
       transform: skewX(25deg) translate(0,0);
       transition: .5s;
       &:nth-child(1){
@@ -132,6 +204,79 @@ header{
           border: 2px solid #e51488;
           filter: drop-shadow(-1px -2px 2px #e51488);
         }
+      }
+    }
+  }
+  @media (max-width: 719px) {
+    nav.desktop{
+      transform: translateY(-120px);
+      transition: .5s;
+    }
+    nav.mobile{
+      display: flex;
+      transform: translateX(0px);
+      transition: .5s;
+    }
+  }
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 50px;
+  background: black;
+  color: deeppink;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 300;
+  h3{
+    display: block;
+    padding: 3px;
+    background: deeppink;
+    color: black;
+    margin-right: 20px;
+    z-index: 9;
+  }
+  .animatedLine{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    div{
+      position: absolute;
+      bottom: -1px;
+      width: 100%;
+      height: 1px;
+      background: deeppink;
+      animation-name: footer-animation;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+    div:nth-child(2){
+      animation-delay: 1s;
+    }
+    div:nth-child(3){
+      animation-delay: 2s;
+    }
+    div:nth-child(4){
+      animation-delay: 2.5s;
+    }
+    div:nth-child(5){
+      animation-delay: 3s;
+    }
+    div:nth-child(6){
+      animation-delay: 3.5s;
+    }
+    @keyframes footer-animation {
+      from {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-150px);
+        opacity: 0;
       }
     }
   }

@@ -16,7 +16,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <Header />
-        <Application />
+      <Application />
       <Footer />
     </Router>
   </Provider>,
