@@ -37,8 +37,8 @@ export default class MobileNavigation extends Component {
         <NavLink exact to="/stack">
           Stack
         </NavLink>
-        <NavLink exact to="/portfolio">
-          Portfolio
+        <NavLink exact to="/playground">
+          Playground
         </NavLink>
         <NavLink exact to="/contacts">
           Contacts
