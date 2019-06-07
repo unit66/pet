@@ -83,6 +83,7 @@ header{
   justify-content: center;
   transform: translateX(45%);
   transition: .5s;
+  will-change: transform;
   &.active{
     transform: translateX(0);
     nav{
@@ -111,6 +112,7 @@ header{
     background: $black;
     flex-direction: column;
     align-items: flex-end;
+    will-change: transform;
     -webkit-clip-path: polygon(68% 0, 100% 0, 100% 100%, 64% 100%, 66% 87%, 67% 46%);
     clip-path: polygon(68% 0, 100% 0, 100% 100%, 64% 100%, 66% 87%, 67% 46%);
     transition: .5s;

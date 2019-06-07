@@ -2,7 +2,7 @@ const GET_STACK = 'GET_STACK'
 
 export function getStack() {
   return function (dispatch) {
-      const url = new URL('http://localhost:666/api/stack', window.location.origin)
+      const url = new URL('/api/stack', window.location.origin)
       const params = {
         method: 'GET',
       }
