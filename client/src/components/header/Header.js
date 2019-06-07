@@ -21,7 +21,7 @@ export default class Header extends Component{
 
   render() {
     return (
-      <header className={ this.state.active ? "active" : "" }>
+      <header className={ this.state.active ? "active" : "inactive" }>
         <a href="#" onClick={ this.toggleNavigation } className="toggleMenu">
           { this.state.active ? <i className="material-icons">
             close

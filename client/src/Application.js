@@ -4,7 +4,7 @@ import Home from './containers/home/HomeContainer';
 import P404 from './components/p404/P404';
 import Contacts from './components/contacts/Contacts';
 import Playground from './components/playground/Playground';
-import Stack from './components/stack/Stack';
+import Stack from './containers/stack/StackContainer';
 
 export default class Application extends Component {
   render() {

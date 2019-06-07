@@ -93,6 +93,7 @@ header{
   a.toggleMenu{
     position: absolute;
     top: 20px;
+    left: calc(50% - 30px);
     i{
       font-size: 3rem;
       color: $black;
@@ -169,16 +170,30 @@ main{
     line-height: 1.4;
     font-size: 2.5rem;
     color: $black;
+    height: 100%;
     p{
-      margin-bottom: 20px;
+      margin: 20px 50px;
     }
     ul.stackList{
       font-size: 1.1rem;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      max-height: 85vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      margin: 0 20px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       grid-gap: 20px;
+      padding: 0 20px;
+      &::-webkit-scrollbar {
+        width: .5em;
+        transform: translateX(10px);
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: darken($teal, 20%);
+      }
       li{
         display: grid;
+        position: relative;
         justify-content: center;
         align-items: center;
         grid-auto-flow: column;
@@ -187,9 +202,25 @@ main{
         text-transform: uppercase;
         letter-spacing: 2px;
         height: 180px;
+        padding: 10px 10px;
         img{
           max-width: 150px;
           width: 100px;
+          margin: 0 auto;
+        }
+        &:before{
+          content: '';
+          display: block;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: $blue;
+          z-index: -1;
+          transition: .5s;
+          transform: rotate(0deg);
+        }
+        &:hover:before{
+          transform: rotate(5deg);
         }
       }
     }
@@ -227,6 +258,53 @@ main{
       text-decoration: none;
       &:hover{
         color: darken($teal, 25%);
+      }
+    }
+  }
+}
+
+@media (max-width: 719px) {
+  header{
+    transform: translateX(100%);
+    width: 100%;
+    a.toggleMenu {
+      position: absolute;
+      top: 5px;
+      left: -60px;
+      transition: .5s;
+    }
+    nav{
+      &:before{
+        -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%, 10% 91%, 15% 46%);
+        clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%, 10% 91%, 15% 46%);
+      }
+    }
+    &.active{
+      a.toggleMenu {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+      }
+      nav{
+        -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0% 87%, 0% 20%);
+        clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0% 87%, 0% 20%);
+      }
+    }
+  }
+  footer{
+    display: none;
+  }
+  main{
+    max-width: 100vw;
+    max-height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    .stack{
+      height: 100%;
+      ul.stackList {
+        font-size: 1.1rem;
+        display: grid;
+        max-height: 55vh;
       }
     }
   }
