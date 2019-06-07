@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import DesktopNavigation from './DesktopNavigation'
-import MobileNavigation from './MobileNavigation'
+import Navigation from './Navigation'
 
 export default class Header extends Component{
   constructor() {
@@ -10,8 +9,7 @@ export default class Header extends Component{
     }
   }
 
-  toggleNavigation = (e) => {
-    e.preventDefault();
+  toggleNavigation = () => {
     this.setState((prevState) => {
       return {
         active: !prevState.active,
@@ -30,7 +28,7 @@ export default class Header extends Component{
           </i> }
 
         </a>
-        <DesktopNavigation/>
+        <Navigation toggleNavigation={ this.toggleNavigation }/>
       </header>
     );
   }
