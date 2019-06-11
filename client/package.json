@@ -4,8 +4,8 @@
   "description": "FrontEnd Part",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack-dev-server"
+    "build": "webpack --mode production --env.API_URL=https://unit66-pet.herokuapp.com",
+    "dev": "webpack-dev-server --env.API_URL=http://localhost:666"
   },
   "author": "Unit66",
   "license": "ISC",

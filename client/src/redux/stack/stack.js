@@ -1,8 +1,9 @@
-const GET_STACK = 'GET_STACK'
+const GET_STACK = 'GET_STACK';
+const API_URL = process.env.API_URL;
 
 export function getStack() {
   return function (dispatch) {
-      const url = new URL('/api/stack', window.location.origin)
+      const url = new URL(`${API_URL}/api/stack`, window.location.origin)
       const params = {
         method: 'GET',
       }

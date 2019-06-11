@@ -281,6 +281,9 @@ main{
         -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%, 10% 91%, 15% 46%);
         clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%, 10% 91%, 15% 46%);
       }
+      a{
+        font-size: 2.5rem;
+      }
     }
     &.active{
       a.toggleMenu {
@@ -305,6 +308,9 @@ main{
     margin-bottom: 20px;
     .stack{
       height: 100%;
+      p{
+        font-size: 1.6rem;
+      }
       ul.stackList {
         font-size: 1.1rem;
         display: grid;
