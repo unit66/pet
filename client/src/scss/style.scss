@@ -91,7 +91,7 @@ header{
       clip-path: polygon(60% 0, 100% 0, 100% 100%, 0 100%, 36% 87%, 53% 45%);
     }
   }
-  a.toggleMenu{
+  .toggleMenu{
     position: absolute;
     top: 20px;
     left: calc(50% - 30px);
@@ -158,7 +158,7 @@ main{
   height: 100%;
   justify-content: center;
   align-items: center;
-  span.teal{
+  .teal{
     color: darken($teal, 20%);
   }
   .home{
@@ -176,7 +176,7 @@ main{
     p{
       margin: 20px 50px;
     }
-    ul.stackList{
+    .stackList{
       font-size: 1.1rem;
       display: grid;
       max-height: 85vh;
@@ -270,7 +270,7 @@ main{
   header{
     transform: translateX(100%);
     width: 100%;
-    a.toggleMenu {
+    .toggleMenu {
       position: absolute;
       top: 5px;
       left: -60px;
@@ -286,7 +286,7 @@ main{
       }
     }
     &.active{
-      a.toggleMenu {
+      .toggleMenu {
         position: absolute;
         top: 5px;
         left: 5px;
@@ -311,7 +311,7 @@ main{
       p{
         font-size: 1.6rem;
       }
-      ul.stackList {
+      .stackList {
         font-size: 1.1rem;
         display: grid;
         max-height: 65vh;
