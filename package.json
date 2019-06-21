@@ -31,9 +31,7 @@
     "express": "^4.16.4",
     "mongodb": "^3.2.4",
     "path": "^0.12.7",
-    "serve-favicon": "^2.5.0"
-  },
-  "devDependencies": {
+    "serve-favicon": "^2.5.0",
     "dotenv": "^8.0.0"
   }
 }
