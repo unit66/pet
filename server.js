@@ -5,11 +5,12 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 666;
 
-const uri = 'mongodb+srv://db_admin:admin1@clusterfuck-kwyqt.mongodb.net/pet-db?retryWrites=true';
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}?retryWrites=true`;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
