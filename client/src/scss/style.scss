@@ -59,6 +59,7 @@ $white: #ffffff;
 $blue: #4b4e6d;
 $teal: #84dcc6;
 $grey: #95a3b3;
+$red: #ff3838;
 
 body{
   background: lighten($grey, 20%);
@@ -233,8 +234,157 @@ main{
     line-height: 1.4;
     font-size: 2.5rem;
     color: $black;
-    img{
-      margin-top: 20px;
+    height: 100%;
+    width: 60%;
+    p{
+      margin: 20px 50px;
+    }
+    .caseLinks{
+      display: block;
+      font-size: 1.1rem;
+      a{
+        color: lighten($blue, 15%);
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px;
+        &:hover{
+          color: $blue;
+        }
+      }
+    }
+    .caseList{
+      height: 100%;
+      display: grid;
+      justify-content: center;
+      align-items: start;
+      .case{
+        position: relative;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: 1fr 5fr;
+        justify-content: center;
+        align-items: center;
+        width: 800px;
+        height: 600px;
+        margin: 0;
+        margin-top: -30px;
+        h1{
+          display: block;
+          font-size: 1.4rem;
+          text-align: left;
+          font-weight: 400;
+          width: 100%;
+        }
+        .tags{
+          position: absolute;
+          width: 100%;
+          grid-auto-flow: column;
+          grid-gap: 20px;
+          align-items: center;
+          justify-content: center;
+          display: grid;
+          bottom: -100px;
+          height: 50px;
+          font-size: 1rem;
+          color: lighten($blue, 30%);
+        }
+      }
+      .case1{
+        #canvas{
+          display: block;
+          width: 800px;
+          height: 100%;
+          background: $white;
+        }
+        .colorPicker{
+          position: absolute;
+          width: 100%;
+          grid-auto-flow: column;
+          grid-gap: 20px;
+          align-items: center;
+          justify-content: center;
+          display: grid;
+          bottom: -50px;
+          height: 50px;
+          input[type=color]::-webkit-color-swatch {
+            border: none;
+            border-radius: 50%;
+            padding: 0;
+            background: none;
+            opacity: 0;
+          }
+          input[type=color]::-webkit-color-swatch-wrapper {
+            border: none;
+            border-radius: 50%;
+            padding: 0;
+            background: none;
+            opacity: 0;
+          }
+          input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+          }
+          input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+          }
+          input[type=range]:focus {
+            outline: none;
+          }
+          input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background: darken($grey, 10%);
+            cursor: pointer;
+            margin-top: -5px;
+          }
+          input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            background: $grey;
+            border-radius: 2.5px;
+          }
+          .color{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            &.black{
+              background: $black;
+            }
+            &.red{
+              background: $red;
+            }
+            &.teal{
+              background: $teal;
+            }
+            &.blue{
+              background: $blue;
+            }
+            &.custom{
+              border: none;
+              -webkit-appearance: none;
+              background: #ff3232; /* Old browsers */
+              background: -moz-linear-gradient(-45deg, #ff3232 1%, #fff430 19%, #64ff30 35%, #30ffe3 50%, #3056ff 68%, #dc30ff 85%, #ff0004 100%); /* FF3.6-15 */
+              background: -webkit-linear-gradient(-45deg, #ff3232 1%,#fff430 19%,#64ff30 35%,#30ffe3 50%,#3056ff 68%,#dc30ff 85%,#ff0004 100%); /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(135deg, #ff3232 1%,#fff430 19%,#64ff30 35%,#30ffe3 50%,#3056ff 68%,#dc30ff 85%,#ff0004 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#ff0004',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+            }
+          }
+          .clear{
+            font-size: 1rem;
+            cursor: pointer;
+            &:hover{
+              color: $red;
+            }
+          }
+        }
+
+      }
     }
   }
   .contacts{
