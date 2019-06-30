@@ -52,15 +52,15 @@ export default class Case1 extends Component{
                 let x = e.offsetX;
                 let y = e.offsetY;
                 ctx.lineWidth = this.state.size * 2;
-                ctx.lineTo(x - this.state.size % 2, y - this.state.size % 2);
+                ctx.lineTo(x, y);
                 ctx.stroke();
                 ctx.beginPath();
-                ctx.arc(x - this.state.size % 2, y - this.state.size % 2, this.state.size, 0, Math.PI*2, false );
+                ctx.arc(x, y, this.state.size, 0, Math.PI*2, false );
                 ctx.fillStyle = this.state.color;
                 ctx.strokeStyle = this.state.color;
                 ctx.fill();
                 ctx.beginPath();
-                ctx.moveTo(x - this.state.size % 2, y - this.state.size % 2);
+                ctx.moveTo(x, y);
             }
             canvas.onmouseup = () => {
                 ctx.beginPath();
