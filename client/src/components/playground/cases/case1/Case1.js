@@ -68,8 +68,10 @@ export default class Case1 extends Component{
             }
         }
 
-        canvas.ontouchstart = () => {
+        canvas.ontouchstart = (e) => {
+            e.preventDefault();
             canvas.ontouchmove = (e) => {
+                e.preventDefault();
                 let BB=canvas.getBoundingClientRect();
                 let bbLeft=BB.left;
                 let bbTop=BB.top;
@@ -86,7 +88,13 @@ export default class Case1 extends Component{
                 ctx.beginPath();
                 ctx.moveTo(x, y);
             }
-            canvas.ontouchend = () => {
+            canvas.ontouchend = (e) => {
+                e.preventDefault();
+                ctx.beginPath();
+                canvas.ontouchmove = null;
+            }
+            canvas.ontouchcancel = (e) => {
+                e.preventDefault();
                 ctx.beginPath();
                 canvas.ontouchmove = null;
             }
