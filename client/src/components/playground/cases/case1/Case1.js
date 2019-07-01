@@ -67,6 +67,27 @@ export default class Case1 extends Component{
                 canvas.onmousemove = null;
             }
         }
+
+        canvas.ontouchstart = () => {
+            canvas.ontouchmove = (e) => {
+                let x = e.offsetX;
+                let y = e.offsetY;
+                ctx.lineWidth = this.state.size * 2;
+                ctx.lineTo(x, y);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.arc(x, y, this.state.size, 0, Math.PI*2, false );
+                ctx.fillStyle = this.state.color;
+                ctx.strokeStyle = this.state.color;
+                ctx.fill();
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+            }
+            canvas.ontouchend = () => {
+                ctx.beginPath();
+                canvas.ontouchmove = null;
+            }
+        }
     }
 
     clearCanvas = () => {
