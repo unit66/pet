@@ -93,18 +93,18 @@ export default class Case1 extends Component{
         }
 
         document.body.addEventListener("touchstart",  (e) => {
-            if (e.target == canvas) {
-                e.preventDefault;
+            if (e.target == canvas && window.innerWidth <= 719) {
+                e.preventDefault();
             }
         }, false);
         document.body.addEventListener("touchend", (e) => {
-            if (e.target == canvas) {
-                e.preventDefault;
+            if (e.target == canvas && window.innerWidth <= 719) {
+                e.preventDefault();
             }
         }, false);
         document.body.addEventListener("touchmove", (e) => {
-            if (e.target == canvas) {
-                e.preventDefault;
+            if (e.target == canvas && window.innerWidth <= 719) {
+                e.preventDefault();
             }
         }, false);
     }
