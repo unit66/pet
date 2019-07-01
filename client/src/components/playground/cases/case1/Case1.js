@@ -70,8 +70,11 @@ export default class Case1 extends Component{
 
         canvas.ontouchstart = () => {
             canvas.ontouchmove = (e) => {
-                let x = e.offsetX;
-                let y = e.offsetY;
+                // let BB=canvas.getBoundingClientRect();
+                // let bbLeft=BB.left;
+                // let bbTop=BB.top;
+                let x = e.touches[0].clientX// - bbLeft;
+                let y = e.touches[0].clientY// - bbTop;
                 ctx.lineWidth = this.state.size * 2;
                 ctx.lineTo(x, y);
                 ctx.stroke();
@@ -88,6 +91,22 @@ export default class Case1 extends Component{
                 canvas.ontouchmove = null;
             }
         }
+
+        document.body.addEventListener("touchstart",  (e) => {
+            if (e.target == canvas) {
+                e.preventDefault;
+            }
+        }, false);
+        document.body.addEventListener("touchend", (e) => {
+            if (e.target == canvas) {
+                e.preventDefault;
+            }
+        }, false);
+        document.body.addEventListener("touchmove", (e) => {
+            if (e.target == canvas) {
+                e.preventDefault;
+            }
+        }, false);
     }
 
     clearCanvas = () => {
@@ -104,7 +123,7 @@ export default class Case1 extends Component{
         return (
             <li className="case case1">
                 <h1>Case 1: <span className="teal">Canvas Drawer</span></h1>
-                <canvas id="canvas" ref="canvas" width={800} height={500}></canvas>
+                { window.innerWidth > 720 ? <canvas id="canvas" ref="canvas" width={800} height={500}></canvas> : <canvas id="canvas" ref="canvas" width={320} height={240}></canvas>}
                 <aside className="colorPicker">
                     <input type="range" id="size" name="size" min="1" max="25" value={ this.state.size } step="1" onChange={ this.changeSize }/>
                     <div className="color black" data-color="#222222" onClick={ this.setColor }></div>

@@ -276,14 +276,13 @@ main{
           width: 100%;
         }
         .tags{
-          position: absolute;
+          position: relative;
           width: 100%;
           grid-auto-flow: column;
           grid-gap: 20px;
           align-items: center;
           justify-content: center;
           display: grid;
-          bottom: -100px;
           height: 50px;
           font-size: 1rem;
           color: lighten($blue, 30%);
@@ -293,18 +292,17 @@ main{
         #canvas{
           display: block;
           width: 800px;
-          height: 100%;
+          height: 500px;
           background: $white;
         }
         .colorPicker{
-          position: absolute;
+          position: relative;
           width: 100%;
           grid-auto-flow: column;
           grid-gap: 20px;
           align-items: center;
           justify-content: center;
           display: grid;
-          bottom: -50px;
           height: 50px;
           input[type=color]::-webkit-color-swatch {
             border: none;
@@ -383,7 +381,15 @@ main{
             }
           }
         }
-
+        @media (max-width: 719px) {
+          #canvas{
+            width: 320px;
+            height: 240px;
+          }
+          .colorPicker{
+            width: 320px;
+          }
+        }
       }
     }
   }
@@ -465,6 +471,23 @@ main{
         font-size: 1.1rem;
         display: grid;
         max-height: 65vh;
+      }
+    }
+    .playground{
+      height: 100%;
+      width: 100%;
+      p{
+        font-size: 1.6rem;
+      }
+      .caseList{
+        .case{
+          width: 100%;
+          height: auto;
+          .tags{
+            font-size: 0.8rem;
+          }
+        }
+
       }
     }
   }
