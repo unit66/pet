@@ -70,11 +70,11 @@ export default class Case1 extends Component{
 
         canvas.ontouchstart = () => {
             canvas.ontouchmove = (e) => {
-                // let BB=canvas.getBoundingClientRect();
-                // let bbLeft=BB.left;
-                // let bbTop=BB.top;
-                let x = e.touches[0].clientX// - bbLeft;
-                let y = e.touches[0].clientY// - bbTop;
+                let BB=canvas.getBoundingClientRect();
+                let bbLeft=BB.left;
+                let bbTop=BB.top;
+                let x = e.touches[0].clientX - bbLeft;
+                let y = e.touches[0].clientY - bbTop;
                 ctx.lineWidth = this.state.size * 2;
                 ctx.lineTo(x, y);
                 ctx.stroke();
@@ -91,22 +91,6 @@ export default class Case1 extends Component{
                 canvas.ontouchmove = null;
             }
         }
-
-        document.body.addEventListener("touchstart",  (e) => {
-            if (e.target == canvas && window.innerWidth <= 719) {
-                e.preventDefault();
-            }
-        }, false);
-        document.body.addEventListener("touchend", (e) => {
-            if (e.target == canvas && window.innerWidth <= 719) {
-                e.preventDefault();
-            }
-        }, false);
-        document.body.addEventListener("touchmove", (e) => {
-            if (e.target == canvas && window.innerWidth <= 719) {
-                e.preventDefault();
-            }
-        }, false);
     }
 
     clearCanvas = () => {
