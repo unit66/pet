@@ -290,6 +290,7 @@ main{
       }
       .case1{
         #canvas{
+          touch-action: none !important;
           display: block;
           width: 800px;
           height: 500px;
