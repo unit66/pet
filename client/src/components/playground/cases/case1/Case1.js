@@ -118,10 +118,10 @@ export default class Case1 extends Component{
                 { window.innerWidth > 720 ? <canvas id="canvas" ref="canvas" width={800} height={500}></canvas> : <canvas id="canvas" ref="canvas" width={320} height={240}></canvas>}
                 <aside className="colorPicker">
                     <input type="range" id="size" name="size" min="1" max="25" value={ this.state.size } step="1" onChange={ this.changeSize }/>
-                    <div className="color black" data-color="#222222" onClick={ this.setColor }></div>
-                    <div className="color blue" data-color="#4b4e6d" onClick={ this.setColor }></div>
-                    <div className="color teal" data-color="#84dcc6" onClick={ this.setColor }></div>
-                    <div className="color red" data-color="#ff3838" onClick={ this.setColor }></div>
+                    <div className={ this.state.color === '#222222' ? 'color black active' : 'color black'} data-color="#222222" onClick={ this.setColor }></div>
+                    <div className={ this.state.color === '#4b4e6d' ? 'color blue active' : 'color blue'} data-color="#4b4e6d" onClick={ this.setColor }></div>
+                    <div className={ this.state.color === '#84dcc6' ? 'color teal active' : 'color teal'} data-color="#84dcc6" onClick={ this.setColor }></div>
+                    <div className={ this.state.color === '#ff3838' ? 'color red active' : 'color red'} data-color="#ff3838" onClick={ this.setColor }></div>
                     <input type="color" className="color custom" onInput={ this.customColor }/>
                     <div className="clear" onClick={ this.clearCanvas }>clear</div>
                 </aside>

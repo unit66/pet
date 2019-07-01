@@ -352,6 +352,9 @@ main{
             height: 20px;
             border-radius: 50%;
             cursor: pointer;
+            &.active{
+              filter: drop-shadow(0 2px 3px darken($grey, 20%));
+            }
             &.black{
               background: $black;
             }
