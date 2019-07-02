@@ -6,7 +6,7 @@ export default class Case1 extends Component{
         this.state = {
             color: '#222222',
             size: 3
-        }
+        };
         this.setColor = this.setColor.bind(this);
         this.customColor = this.customColor.bind(this);
         this.changeSize = this.changeSize.bind(this);
@@ -24,7 +24,7 @@ export default class Case1 extends Component{
                 size,
             }
         })
-    }
+    };
 
     setColor = ({ target }) => {
         const { color } = target.dataset;
@@ -33,7 +33,7 @@ export default class Case1 extends Component{
                 color,
             }
         })
-    }
+    };
 
     customColor = ({ target }) => {
         this.setState(() => {
@@ -41,7 +41,7 @@ export default class Case1 extends Component{
                 color: target.value,
             }
         })
-    }
+    };
 
     updateCanvas() {
         const canvas = document.getElementById('canvas');
@@ -61,12 +61,12 @@ export default class Case1 extends Component{
                 ctx.fill();
                 ctx.beginPath();
                 ctx.moveTo(x, y);
-            }
+            };
             canvas.onmouseup = () => {
                 ctx.beginPath();
                 canvas.onmousemove = null;
             }
-        }
+        };
 
         canvas.ontouchstart = (e) => {
             e.preventDefault();
@@ -87,12 +87,12 @@ export default class Case1 extends Component{
                 ctx.fill();
                 ctx.beginPath();
                 ctx.moveTo(x, y);
-            }
+            };
             canvas.ontouchend = (e) => {
                 e.preventDefault();
                 ctx.beginPath();
                 canvas.ontouchmove = null;
-            }
+            };
             canvas.ontouchcancel = (e) => {
                 e.preventDefault();
                 ctx.beginPath();

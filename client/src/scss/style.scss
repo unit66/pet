@@ -141,6 +141,10 @@ header{
       &:hover{
         color: lighten($grey, 40%);
       }
+      @media (min-width: 720px) and (max-width: 1250px) {
+        font-size: 1.7rem;
+        margin: 15px;
+      }
     }
   }
 }
@@ -250,6 +254,10 @@ main{
         &:hover{
           color: $blue;
         }
+        &.active{
+          color: lighten($blue, 25%);
+          border-bottom: 2px solid lighten($blue, 25%);
+        }
       }
     }
     .caseList{
@@ -267,7 +275,6 @@ main{
         width: 800px;
         height: 600px;
         margin: 0;
-        margin-top: -30px;
         h1{
           display: block;
           font-size: 1.4rem;
@@ -392,6 +399,61 @@ main{
           }
           .colorPicker{
             width: 320px;
+          }
+        }
+      }
+      .case2{
+        $case2-orange: #ffba3b;
+        .calculator{
+          width: 800px;
+          .graphics{
+            position: relative;
+            background: $black;
+            height: 300px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-rows: 2fr 6fr;
+            h2{
+              color: $case2-orange;
+              filter: drop-shadow(0 2px 3px black);
+            }
+            img{
+              width: 100%;
+            }
+          }
+          .prices{
+            background: $black;
+            height: auto;
+            padding: 60px 20px 20px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+            font-size: 1rem;
+            .item{
+              color: lighten($case2-orange, 10%);
+              border: 2px solid $case2-orange;
+              text-transform: capitalize;
+              display: inline-flex;
+              justify-content: space-between;
+              padding: 5px 10px;
+              .price{
+                color:darken(white, 10%);
+              }
+            }
+          }
+          .total{
+            background: $black;
+            font-size: 1.5rem;
+            text-align: right;
+            padding: 20px;
+            h3{
+              display: inline;
+              color: darken(white, 10%);
+            }
+            span{
+              color: lighten($case2-orange, 10%);
+            }
           }
         }
       }
