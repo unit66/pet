@@ -7,7 +7,7 @@ export default class Playground extends Component{
     constructor() {
         super()
         this.state = {
-            activeCase: 'case1'
+            activeCase: 'case2'
         }
         this.showCase = this.showCase.bind(this);
     }
@@ -27,11 +27,11 @@ export default class Playground extends Component{
                 {/*Если ничего нет - заглушка*/}
                 {/*<img src="./img/misc/officer-barbrady.jpg"/>*/}
                 {/*<p>There`s nothing to see here atm - just move along.</p>*/}
-                {/*<nav className="caseLinks">*/}
-                {/*    <a href="#" className={ this.state.activeCase === 'case1' ? 'active' : undefined } onClick={ this.showCase } id="case1">Case 1</a>*/}
-                {/*    <a href="#" className={ this.state.activeCase === 'case2' ? 'active' : undefined } onClick={ this.showCase } id="case2">Case 2</a>*/}
-                {/*    /!*<a href="#" className={ this.state.activeCase === 'case3' ? 'active' : undefined } onClick={ this.showCase } id="case3">Case 3</a>*!/*/}
-                {/*</nav>*/}
+                <nav className="caseLinks">
+                    <a href="#" className={ this.state.activeCase === 'case1' ? 'active' : undefined } onClick={ this.showCase } id="case1">Case 1</a>
+                    <a href="#" className={ this.state.activeCase === 'case2' ? 'active' : undefined } onClick={ this.showCase } id="case2">Case 2</a>
+                    {/*<a href="#" className={ this.state.activeCase === 'case3' ? 'active' : undefined } onClick={ this.showCase } id="case3">Case 3</a>*/}
+                </nav>
                 <ul className="caseList">
                     { this.state.activeCase === 'case1' ? <Case1/> : false }
                     { this.state.activeCase === 'case2' ? <Case2/> : false }

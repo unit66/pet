@@ -406,6 +406,8 @@ main{
         $case2-orange: #ffba3b;
         .calculator{
           width: 800px;
+          min-height: 660px;
+          background: $black;
           .graphics{
             position: relative;
             background: $black;
@@ -419,6 +421,9 @@ main{
               filter: drop-shadow(0 2px 3px black);
             }
             img{
+              position: absolute;
+              top: 20%;
+              left: 0;
               width: 100%;
             }
           }
@@ -437,8 +442,17 @@ main{
               display: inline-flex;
               justify-content: space-between;
               padding: 5px 10px;
+              filter: drop-shadow(0 2px 3px black);
               .price{
                 color:darken(white, 10%);
+              }
+              &:hover{
+                color: $case2-orange;
+                border: 2px solid darken($case2-orange, 10%);
+                cursor: pointer;
+                .price{
+                  color:darken(white, 20%);
+                }
               }
             }
           }
@@ -450,9 +464,11 @@ main{
             h3{
               display: inline;
               color: darken(white, 10%);
+              filter: drop-shadow(0 2px 3px black);
             }
             span{
               color: lighten($case2-orange, 10%);
+              filter: drop-shadow(0 2px 3px black);
             }
           }
         }
