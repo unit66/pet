@@ -89,13 +89,16 @@ export default class Case2 extends Component{
                     <section className="graphics">
                         <h2>Click on element to see the price</h2>
                         <img src="./img/cases/case2/car.png" title="Click to see element price" id="car"/>
-                        {
-                        this.state.elements
-                          .filter( e => e.active )
-                          .map(e =>
-                            <img key={ e.name } src={`./img/cases/case2/${ e.name }.png`} />
-                          )
-                        }
+                        <img className={ this.state.elements[0].active ? 'active' : 'inactive' } src="./img/cases/case2/front-bumper.png" />
+                        <img className={ this.state.elements[1].active ? 'active' : 'inactive' } src="./img/cases/case2/hood.png" />
+                        <img className={ this.state.elements[2].active ? 'active' : 'inactive' } src="./img/cases/case2/front-wing.png" />
+                        <img className={ this.state.elements[3].active ? 'active' : 'inactive' } src="./img/cases/case2/roof.png" />
+                        <img className={ this.state.elements[4].active ? 'active' : 'inactive' } src="./img/cases/case2/front-door.png" />
+                        <img className={ this.state.elements[5].active ? 'active' : 'inactive' } src="./img/cases/case2/rear-door.png" />
+                        <img className={ this.state.elements[6].active ? 'active' : 'inactive' } src="./img/cases/case2/rear-wing.png" />
+                        <img className={ this.state.elements[7].active ? 'active' : 'inactive' } src="./img/cases/case2/trunk.png" />
+                        <img className={ this.state.elements[8].active ? 'active' : 'inactive' } src="./img/cases/case2/rear-bumper.png" />
+                        <img className={ this.state.elements[9].active ? 'active' : 'inactive' } src="./img/cases/case2/skirts.png" />
                         <img src="./img/cases/case2/map-hack.png" useMap="#map"/>
                         <map name="map">
                             <area onClick={ this.selectItem } target="_blank" alt="front-bumper" title="front-bumper" href="#" coords="126,233,123,209,127,183,139,166,156,156,149,147,124,151,103,167,93,171,76,173,63,175,58,188,58,205,56,222,70,229" shape="poly" />

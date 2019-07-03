@@ -425,6 +425,13 @@ main{
               top: 20%;
               left: 0;
               width: 100%;
+              transition: opacity .5s;
+              &.active{
+                opacity: 1;
+              }
+              &.inactive{
+                opacity: 0;
+              }
             }
           }
           .prices{
