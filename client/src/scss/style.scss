@@ -95,13 +95,19 @@ header{
   .toggleMenu{
     position: absolute;
     top: 20px;
-    left: calc(50% - 30px);
+    left: calc(50% - 50px);
     i{
       font-size: 3rem;
       color: $black;
       &:hover{
         color: darken($teal, 20%);
       }
+    }
+  }
+  &.inactive{
+    width: 10%;
+    nav{
+      width: 50%;
     }
   }
   nav{
