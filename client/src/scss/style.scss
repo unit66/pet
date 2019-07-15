@@ -486,6 +486,43 @@ main{
           }
         }
       }
+      .case3{
+        .controls{
+          position: absolute;
+          display: grid;
+          width: 90px;
+          height: 60px;
+          bottom: 60px;
+          right: 10px;
+          grid-template-areas:
+                  ". up ."
+                  "left . right";
+          div{
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            opacity: .2;
+            background: $grey;
+            &:hover{
+              opacity: .7;
+              cursor: pointer;
+            }
+            &.active{
+              opacity: .7;
+              background: $teal;
+            }
+          }
+          div:nth-child(1){
+            grid-area: left;
+          }
+          div:nth-child(2){
+            grid-area: up;
+          }
+          div:nth-child(3){
+            grid-area: right;
+          }
+        }
+      }
     }
   }
   .contacts{

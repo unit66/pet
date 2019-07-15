@@ -17,6 +17,8 @@ export default class Case3 extends Component{
             holdUp: false,
             interval: {}
         };
+        this.keyDown = this.keyDown.bind(this);
+        this.keyUp = this.keyUp.bind(this);
     }
 
     componentDidMount() {
@@ -116,7 +118,26 @@ export default class Case3 extends Component{
     }
 
     keyDown = (e) => {
-        switch(e.keyCode) {
+        let up = 38;
+        let left = 37;
+        let right = 39;
+        let direction = 0;
+        if(!e.target.title){
+            direction = e.keyCode;
+        }else{
+            switch (e.target.title) {
+                case 'Up':
+                    direction = up;
+                    break;
+                case 'Left':
+                    direction = left;
+                    break;
+                case 'Right':
+                    direction = right;
+                    break;
+            }
+        }
+        switch(direction) {
             case 37:
                 this.setState(() => {
                     return {
@@ -141,10 +162,30 @@ export default class Case3 extends Component{
                 });
                 break;
         }
+
     }
 
     keyUp = (e) => {
-        switch(e.keyCode) {
+        let up = 38;
+        let left = 37;
+        let right = 39;
+        let direction = 0;
+        if(!e.target.title){
+            direction = e.keyCode;
+        }else{
+            switch (e.target.title) {
+                case 'Up':
+                    direction = up;
+                    break;
+                case 'Left':
+                    direction = left;
+                    break;
+                case 'Right':
+                    direction = right;
+                    break;
+            }
+        }
+        switch(direction) {
             case 37:
                 this.setState(() => {
                     return {
@@ -176,6 +217,11 @@ export default class Case3 extends Component{
             <li className="case case3">
                 <h1>Case 3: <span className="teal">Canvas Platformer</span></h1>
                 { window.innerWidth > 720 ? <canvas id="canvas" ref="canvas" width={800} height={500}></canvas> : <canvas id="canvas" ref="canvas" width={320} height={240}></canvas>}
+                <aside className="controls">
+                    <div className={ this.state.holdLeft ? 'goLeft active' : 'goLeft'} title="Left" onMouseDown={ this.keyDown } onTouchStart={ this.keyDown } onMouseUp={ this.keyUp } onTouchEnd={ this.keyUp } onMouseLeave={ this.keyUp }></div>
+                    <div className={ this.state.holdUp ? 'goUp active' : 'goUp' } title="Up" onMouseDown={ this.keyDown } onTouchStart={ this.keyDown } onMouseUp={ this.keyUp } onTouchEnd={ this.keyUp } onMouseLeave={ this.keyUp }></div>
+                    <div className={ this.state.holdRight ? 'goRight active' : 'goRight' } title="Right" onMouseDown={ this.keyDown } onTouchStart={ this.keyDown } onMouseUp={ this.keyUp } onTouchEnd={ this.keyUp } onMouseLeave={ this.keyUp }></div>
+                </aside>
                 <section className="tags">
                     #html5 #css3 #canvas #react
                 </section>
