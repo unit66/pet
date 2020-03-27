@@ -10,8 +10,10 @@
   "author": "Unit66",
   "license": "ISC",
   "dependencies": {
+    "classnames": "^2.2.6",
     "css-loader": "^2.1.1",
     "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
@@ -20,6 +22,7 @@
     "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "styled-components": "^5.0.1",
     "webpack-dev-server": "^3.4.1"
   },
   "proxy": "http://localhost:8000",
