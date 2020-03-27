@@ -39,4 +39,4 @@ MongoClient.connect(uri, { useNewUrlParser: true }, function (err, database) {
   app.listen(port, function() {
     console.log('Express Server started');
   });
-})﻿;
+});
