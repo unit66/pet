@@ -186,7 +186,7 @@ const SelectBox = () => {
     };
 
     return (
-        <>
+        <div key={multiSelect}>
             <StyledCheckBox type="checkbox" id='multiselect' onChange={toggleMultiSelect} checked={multiSelect} />
             <label htmlFor="multiselect">MultiSelect</label>
             <StyledDiv>
@@ -209,7 +209,7 @@ const SelectBox = () => {
                 </StyledOptions>
                 {showOptions}
             </StyledDiv>
-        </>
+        </div>
     );
 };
 

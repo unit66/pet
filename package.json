@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "express+react+vue",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "prestart": "cd client && npm run build"
   },
   "engines": {
     "node": "11.13.0"
