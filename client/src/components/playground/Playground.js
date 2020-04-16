@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Case1 from './cases/case1/Case1';
 import Case2 from './cases/case2/Case2';
 import Case3 from './cases/case3/Case3';
-import Case4 from "./cases/case4/Case4";
+import Case4 from './cases/case4/Case4';
 
 export default class Playground extends Component{
     constructor() {
