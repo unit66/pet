@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
@@ -32,8 +32,17 @@ const StyledOption = styled.li`
         background-color: #84dcc6;
         color: white;
       }
+      &.focused{
+        background-color: #84dcc6;
+        color: white;  
+      }
       &.selected{
         background-color: #4b4e6d;
+        color: white;
+        font-weight: bold;
+      }
+      &.selected.focused, &.selected:hover{
+        background-color: #565c98;
         color: white;
         font-weight: bold;
       }
@@ -93,14 +102,17 @@ const SelectBox = () => {
     const [options, setOptions] = useState([
         {
             value: 'Qwe 1',
+            focused: false,
             selected: false
         },
         {
             value: 'Asd 2',
+            focused: false,
             selected: false
         },
         {
             value: 'Zxc 3',
+            focused: false,
             selected: false
         }
     ]);
@@ -108,28 +120,26 @@ const SelectBox = () => {
     const [multiSelect, setMultiSelect] = useState(false);
     const [placeHolder, setPlaceHolder] = useState('Choose or search an option...');
 
-    const toggleOptions = () => {
-        setShowOptions(true);
+    const toggleOptions = (command) => {
+        const toggleOptionsHandler = (e) => {
+            if (e.target.id !== "CustomSelect") {
+                closeAndRemoveListeners();
+            }
+        }
 
-        const removeListener = () => {
+        const closeAndRemoveListeners = () => {
             setShowOptions(false);
-            document.removeEventListener("click", () => {});
-            document.removeEventListener("keyup", () => {});
-        };
+            window.removeEventListener('click', toggleOptionsHandler);
+        }
 
-        document.addEventListener("click", e => {
-            if(e.target.id === "CustomSelect"){
-                setShowOptions(true);
-            }else{
-                removeListener();
-            }
-        });
+        if (!showOptions) {
+            setShowOptions(true);
+            window.addEventListener('click', toggleOptionsHandler);
+        }
 
-        document.addEventListener("keyup", e => {
-            if (e.key === "Enter") {
-                removeListener();
-            }
-        });
+        if (command === 'close') {
+            closeAndRemoveListeners();
+        }
     };
     const filterOptions = (query) => {
         const filter = query.target.value.toLowerCase();
@@ -144,11 +154,13 @@ const SelectBox = () => {
             if(option1.value === option.value){
                 return {
                     value: option1.value,
+                    focused: option1.focused,
                     selected: !option1.selected
                 }
             }
             return {
                 value: option1.value,
+                focused: option1.focused,
                 selected: multiSelect ? option1.selected : false
             }
         });
@@ -156,11 +168,13 @@ const SelectBox = () => {
             if(option1.value === option.value){
                 return {
                     value: option1.value,
+                    focused: option1.focused,
                     selected: !option1.selected
                 }
             }
             return {
                 value: option1.value,
+                focused: option1.focused,
                 selected: multiSelect ? option1.selected : false
             }
         });
@@ -182,11 +196,79 @@ const SelectBox = () => {
         setPlaceHolder(placeholder);
     };
     const toggleMultiSelect = () => {
+        const newOptions = options.map(option => {
+            return {
+                value: option.value,
+                focused: false,
+                selected: false
+            }
+        })
+        setOptions(newOptions);
+        setFilteredOptions(newOptions);
+        setPlaceHolder('Choose or search an option...');
         setMultiSelect(!multiSelect);
     };
+    
+    const keysHandler = (e) => {
+        if (showOptions) {
+            let focusedOptionIndex = options.findIndex(option => option.focused);
+            let nextOptionIndex = focusedOptionIndex > -1 ? focusedOptionIndex + 1 : 0;
+            let prevOptionIndex = focusedOptionIndex > -1 ? focusedOptionIndex - 1 : options.length - 1;
+            if (e.key === "Enter") {
+                const optionToSelect = options.find(option => option.focused);
+                if (optionToSelect) selectOption(options.find(option => option.focused));
+                if (!multiSelect || !optionToSelect) toggleOptions('close');
+            }
+            if (e.key === "ArrowUp") {
+                const newOptions = options.map((option, index) => {
+                    if (index === prevOptionIndex) {
+                        return {
+                            value: option.value,
+                            focused: true,
+                            selected: option.selected
+                        }
+                    } else {
+                        return {
+                            value: option.value,
+                            focused: false,
+                            selected: option.selected
+                        }
+                    };
+                });
+                setOptions(newOptions);
+                setFilteredOptions(newOptions);
+            }
+            if (e.key === "ArrowDown") {
+                const newOptions = options.map((option, index) => {
+                    if (index === nextOptionIndex) {
+                        return {
+                            value: option.value,
+                            focused: true,
+                            selected: option.selected
+                        }
+                    } else {
+                        return {
+                            value: option.value,
+                            focused: false,
+                            selected: option.selected
+                        }
+                    };
+                });
+                setOptions(newOptions);
+                setFilteredOptions(newOptions);
+            }
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('keydown', keysHandler);
+        return () => {
+            window.removeEventListener('keydown', keysHandler);
+        }
+    });
 
     return (
-        <div key={multiSelect}>
+        <>
             <StyledCheckBox type="checkbox" id='multiselect' onChange={toggleMultiSelect} checked={multiSelect} />
             <label htmlFor="multiselect">MultiSelect</label>
             <StyledDiv>
@@ -200,16 +282,15 @@ const SelectBox = () => {
                 <StyledOptions showOptions={showOptions}>
                     { filteredOptions.map((option, index) =>
                         <StyledOption
-                            className={option.selected ? 'selected' : ''}
+                            className={`${option.selected ? 'selected' : ''} ${option.focused ? 'focused' : ''}`}
                             key={index}
                             onClick={() => {selectOption(option)}}
                         >
                             {option.value}
                         </StyledOption>) }
                 </StyledOptions>
-                {showOptions}
             </StyledDiv>
-        </div>
+        </>
     );
 };
 
