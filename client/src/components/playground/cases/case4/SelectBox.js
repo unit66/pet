@@ -293,12 +293,13 @@ const SelectBox = () => {
                 <StyledOptions showOptions={showOptions}>
                     { filteredOptions.map((option, index) =>
                         <StyledOption
-                            className={`${option.selected ? 'selected' : ''} ${option.focused ? 'focused' : ''}`}
+                           className={`${option.selected ? 'selected' : ''} ${option.focused ? 'focused' : ''}`}
                             key={index}
                             onClick={() => {selectOption(option)}}
                         >
                             {option.value}
-                        </StyledOption>) }
+                        </StyledOption>
+                    ) }
                 </StyledOptions>
             </StyledDiv>
         </>

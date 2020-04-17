@@ -1,7 +1,7 @@
 {
   "name": "ongoing-pet-project",
   "version": "1.0.0",
-  "description": "express+react+vue",
+  "description": "express+react",
   "scripts": {
     "start": "node server.js"
   },
