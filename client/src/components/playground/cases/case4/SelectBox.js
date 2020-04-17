@@ -123,6 +123,18 @@ const SelectBox = () => {
     const toggleOptions = (command) => {
         const toggleOptionsHandler = (e) => {
             if (e.target.id !== "CustomSelect") {
+                if (!multiSelect) {
+                    const newOptions = options.map(option => {
+                        option.focused = false;
+                        return option
+                    });
+                    const newFilteredOptions = filteredOptions.map(option => {
+                        option.focused = false;
+                        return option
+                    });
+                    setOptions(newOptions);
+                    setFilteredOptions(newFilteredOptions);
+                }
                 closeAndRemoveListeners();
             }
         }
@@ -208,12 +220,11 @@ const SelectBox = () => {
         setPlaceHolder('Choose or search an option...');
         setMultiSelect(!multiSelect);
     };
-    
     const keysHandler = (e) => {
         if (showOptions) {
-            let focusedOptionIndex = options.findIndex(option => option.focused);
-            let nextOptionIndex = focusedOptionIndex > -1 ? focusedOptionIndex + 1 : 0;
-            let prevOptionIndex = focusedOptionIndex > -1 ? focusedOptionIndex - 1 : options.length - 1;
+            const focusedOptionIndex = options.findIndex(option => option.focused);
+            const nextOptionIndex = focusedOptionIndex > -1 ? focusedOptionIndex === options.length - 1 ? 0 : focusedOptionIndex + 1 : 0;
+            const prevOptionIndex = focusedOptionIndex > -1 ? focusedOptionIndex === 0 ? options.length - 1 : focusedOptionIndex - 1 : options.length - 1;
             if (e.key === "Enter") {
                 const optionToSelect = options.find(option => option.focused);
                 if (optionToSelect) selectOption(options.find(option => option.focused));
@@ -270,7 +281,7 @@ const SelectBox = () => {
     return (
         <>
             <StyledCheckBox type="checkbox" id='multiselect' onChange={toggleMultiSelect} checked={multiSelect} />
-            <label htmlFor="multiselect">MultiSelect</label>
+            <label htmlFor="multiselect">Toggle Multi-Select</label>
             <StyledDiv>
                 <StyledInput
                     id="CustomSelect"
