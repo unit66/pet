@@ -815,8 +815,23 @@ span{
   position: fixed;
   top: 20px;
   width: calc(100% - 40px);
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    top: 60px;
+    .player {
+      width: calc(100% - 50px);
+      margin-left: -35px!important;
+      margin-bottom: 5px!important;
+    }
+    .addPlayers {
+      top: -45px!important;
+      right: 30px!important;
+    }
+  }
   .player{
-    display: block;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
     border: 1px solid grey;
     border-radius: 5px;
     margin: 0 5px;
@@ -862,6 +877,16 @@ span{
 }
 .content{
   margin-top: 50px;
+  @media only screen and (max-width: 768px) {
+    margin-top: 215px;
+    .more {
+      display: inline-block;
+      background-color: red;
+      color: white !important;
+      border-radius: 5px;
+      padding: 5px 35px;
+    }
+  }
 }
 
 .songs{

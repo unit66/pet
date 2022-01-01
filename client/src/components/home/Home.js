@@ -18,10 +18,10 @@ const Home = () => {
         offset: 0
     });
     const [players, setPlayers] = useState([
-        // {name: 'Слава', score: 0},
-        // {name: 'Алёна', score: 0},
-        // {name: 'Надя', score: 0},
-        // {name: 'Никита', score: 0},
+        {name: 'Слава', score: 0},
+        {name: 'Алёна', score: 0},
+        {name: 'Надя', score: 0},
+        {name: 'Никита', score: 0},
     ]);
     const [newPlayer, setNewPlayer] = useState('');
 
@@ -55,6 +55,17 @@ const Home = () => {
         return 0;
     }
 
+    const editPlayer = (player, newScore) => {
+        const editPlayers = players.map(pl => {
+            if (pl.name !== player.name) return pl;
+            return {
+                name: pl.name,
+                score: newScore
+            }
+        })
+        setPlayers(editPlayers.sort(sortByScore));
+    }
+
     return (
         <section className="wrapper">
             { pending && (
@@ -66,16 +77,9 @@ const Home = () => {
                 { players.map((player, index) => (
                     <div className={`player${index === 0 ? ' leader' : ''}`}>
                         <span>{ player.name }</span>
-                        <input type="number" value={player.score} onChange={(e) => {
-                            const editPlayers = players.map(pl => {
-                                if (pl.name !== player.name) return pl;
-                                return {
-                                    name: pl.name,
-                                    score: e.target.value
-                                }
-                            })
-                            setPlayers(editPlayers.sort(sortByScore));
-                        }}/>
+                        {player.score}
+                        <button onClick={() => editPlayer(player, player.score+1)} className="setScore">+</button>
+                        <button onClick={() => editPlayer(player, player.score-1)} className="setScore">-</button>
                     </div>
                 )) }
                 <div className="addPlayers">

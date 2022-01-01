@@ -67,7 +67,7 @@ const Song = (props) => {
             { time !== 0 && !solved && (
                 <>
                     <b><span style={{"color":"#69b593"}}>{ time }</span> sec - </b>
-                    <span onClick={changeTime} style={{"color":"#ff3838", "cursor": "pointer"}}>more</span>
+                    <span onClick={changeTime} style={{"color":"#ff3838", "cursor": "pointer"}} className="more">more</span>
                     <br />
                     <span className="not-solved" onClick={() => setSolved(!solved)}>solved</span>
                     <br />
