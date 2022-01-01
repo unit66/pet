@@ -1,8 +1,9 @@
 {
-  "name": "ongoing-pet-project",
-  "version": "1.0.0",
-  "description": "express+react",
+  "name": "GTSC",
+  "version": "2.0.0",
+  "description": "Guess That Song Chalange Game",
   "scripts": {
+    "START_GAME": "concurrently \"node server.js\" \"cd ./client && npm run dev\"",
     "start": "node server.js"
   },
   "engines": {
@@ -16,9 +17,7 @@
     "nodejs",
     "express",
     "react",
-    "redux",
-    "vue",
-    "vuex"
+    "redux"
   ],
   "author": "unit66",
   "license": "ISC",
@@ -27,12 +26,15 @@
   },
   "homepage": "https://github.com/unit66/pet#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.16.4",
-    "mongodb": "^3.2.4",
-    "path": "^0.12.7",
-    "serve-favicon": "^2.5.0",
-    "dotenv": "^8.0.0"
+    "body-parser": "1.19.0",
+    "concurrently": "5.3.0",
+    "directory-tree": "2.2.5",
+    "dotenv": "8.0.0",
+    "express": "4.16.4",
+    "fluent-ffmpeg": "2.1.2",
+    "path": "0.12.7",
+    "serve-favicon": "2.5.0",
+    "ytdl-core": "github:fent/node-ytdl-core#pull/1022/head"
   },
   "devDependencies": {}
 }

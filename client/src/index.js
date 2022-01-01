@@ -4,8 +4,6 @@ import { Provider } from 'react-redux';
 import createStore from './redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Application from './Application';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
 import './scss/style.scss'
 
 const store = createStore(
@@ -15,9 +13,7 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <Header />
       <Application />
-      <Footer />
     </Router>
   </Provider>,
   document.getElementById('app')
