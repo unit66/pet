@@ -57,7 +57,7 @@ table {
 $black: #222222;
 $white: #ffffff;
 $blue: #4b4e6d;
-$teal: #84dcc6;
+$teal: #69b593;
 $grey: #95a3b3;
 $red: #ff3838;
 
@@ -623,5 +623,262 @@ main{
 
       }
     }
+  }
+}
+
+main {
+  overflow-y: auto;
+}
+
+.wrapper{
+  margin: 20px;
+  width: 100%;
+  height: 95%;
+  margin-top: -55px;
+}
+
+h6, h1, h2{
+  display: inline;
+  font-size: 22px;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+h3{
+  display: inline;
+}
+
+h1{
+  font-size: 18px;
+  color: $black;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 16px;
+  color: $blue;
+  cursor: pointer;
+}
+
+small {
+  font-size: 16px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+a {
+  color: $teal;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+hr{
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+audio {
+  width: 100%;
+  user-select: none;
+  outline: none;
+  margin-top: 50px;
+}
+
+button {
+  position: relative;
+  z-index: 999;
+  margin-top: 20px;
+  padding: 10px 40px;
+  font-size: 18px;
+  background: $teal;
+}
+
+input {
+  position: relative;
+  z-index: 999;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+label {
+  position: relative;
+  z-index: 999;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+div.form{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+div.form.open{
+  display: flex;
+  .formWrapper{
+    display: grid;
+    position: absolute;
+    z-index: 999;
+    background: whitesmoke;
+    padding: 30px;
+    border: 1px solid darkgray;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+    width: 600px;
+    height: 400px;
+  }
+  span {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+    color: red;
+    z-index: 9999;
+  }
+}
+
+h4 {
+  color: $red;
+  right: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: -25px;
+  z-index: 997;
+  position: absolute;
+}
+
+h5 {
+  color: $red;
+  float: right;
+  cursor: pointer;
+}
+
+.pending{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.3);
+  img{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.song{
+  padding: 10px 10px 5px 10px;
+  margin-bottom: 2px;
+  border-radius: 5px;
+  hr{
+    margin: 2px;
+  }
+  &.solved{
+    background-color: goldenrod;
+  }
+}
+
+span{
+  display: inline-block;
+  margin: 5px 0;
+  &.not-solved{
+    color:goldenrod;
+    border-radius: 2px;
+    border: 1px solid goldenrod;
+    padding: 3px 15px;
+    cursor: pointer;
+    &:hover{
+      color:rgba(0, 0, 0, 0.3);
+      background-color: goldenrod;
+    }
+  }
+}
+
+.players{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  width: calc(100% - 40px);
+  .player{
+    display: block;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 5px;
+    &.leader{
+      background-color: goldenrod;
+      margin-left: 0;
+    }
+  }
+  .addPlayers {
+    position: absolute;
+    right: -10px;
+    top: 0;
+  }
+  input[type="text"] {
+    width: fit-content;
+    height: fit-content;
+    font-size: 14px;
+    margin:0;
+    border-radius: 5px;
+    border-width: 1px;
+  }
+  input[type="number"] {
+    margin: 0;
+    width: 30px;
+    font-size: 14px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: inherit;
+  }
+  span{
+    width: 100px;
+  }
+  button {
+    width: 30px !important;
+    height: 30px !important;
+    padding: 0;
+    margin: 0 10px;
+    background-color: white;
+    border-radius: 5px;
+    border-width: 1px;
+  }
+}
+.content{
+  margin-top: 50px;
+}
+
+.songs{
+  overflow-y: scroll;
+  height: calc(100vh - 250px);
+}
+
+.playButton {
+  margin-top: 40px;
+  color: white;
+  background-color: $blue;
+  width: 155px !important;
+  height: auto !important;
+  padding: 5px 20px;
+  border-radius: 5px;
+  &:disabled {
+    background-color: lighten($blue, 10%);
+    color: #95a3b3;
   }
 }

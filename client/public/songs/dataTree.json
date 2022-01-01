@@ -1,0 +1,680 @@
+[
+    {
+        "author": "0001_Дискотека_авария",
+        "song": "Новогодняя",
+        "source": "https://www.youtube.com/watch?v=vCttGGuSFrw",
+        "offset": "2"
+    },
+    {
+        "author": "0002_Mark_Ronson_and_Bruno_Mars",
+        "song": "Uptown_Funk",
+        "source": "https://www.youtube.com/watch?v=CeYuFSBkkVw",
+        "offset": 0
+    },
+    {
+        "author": "0003_No_Doubt",
+        "song": "Dont_speak",
+        "source": "https://www.youtube.com/watch?v=ecgXVeJaYwE",
+        "offset": 0
+    },
+    {
+        "author": "0004_Rolling_Stones",
+        "song": "Paint_it_black",
+        "source": "https://www.youtube.com/watch?v=O4irXQhgMqg",
+        "offset": 0
+    },
+    {
+        "author": "0005_Грибы",
+        "song": "Велик",
+        "source": "https://www.youtube.com/watch?v=xQgjGk0lUDI",
+        "offset": 0
+    },
+    {
+        "author": "0006_Maroon_5",
+        "song": "Wake_up_call",
+        "source": "https://www.youtube.com/watch?v=AW_zrqpJDPI",
+        "offset": 0
+    },
+    {
+        "author": "0007_Отпетые_мошенники",
+        "song": "А_у_реки",
+        "source": "https://www.youtube.com/watch?v=iJBxvI1Lt2M",
+        "offset": "3"
+    },
+    {
+        "author": "0008_Bomfunk_MCs",
+        "song": "Freestyler",
+        "source": "https://www.youtube.com/watch?v=JhMar_ADi_A",
+        "offset": "23"
+    },
+    {
+        "author": "0009_Rage_against_the_machine",
+        "song": "Guerilla_Radio",
+        "source": "https://www.youtube.com/watch?v=n6cBRx2Ie6A",
+        "offset": "0.5"
+    },
+    {
+        "author": "0010_Lana_del_rey",
+        "song": "Young_and_Beautiful",
+        "source": "https://www.youtube.com/watch?v=o_1aF54DO60",
+        "offset": "15.5"
+    },
+    {
+        "author": "0011_Army_of_lovers",
+        "song": "Sexual_Revolution",
+        "source": "https://www.youtube.com/watch?v=6Eo_2nVSO2Q",
+        "offset": 0
+    },
+    {
+        "author": "0012_Linkin_park",
+        "song": "Bleed_it_out",
+        "source": "https://www.youtube.com/watch?v=d4OfG7xy3NY",
+        "offset": "3.5"
+    },
+    {
+        "author": "0013_Витас",
+        "song": "Опера_2",
+        "source": "https://www.youtube.com/watch?v=cErArQNzurI",
+        "offset": 0
+    },
+    {
+        "author": "0014_Prodigy",
+        "song": "Girls",
+        "source": "https://www.youtube.com/watch?v=REUVZ9DS4wE",
+        "offset": 0
+    },
+    {
+        "author": "0015_Usher_ft_Lil_John",
+        "song": "Yeah",
+        "source": "https://www.youtube.com/watch?v=GxBSyx85Kp8",
+        "offset": "1.5"
+    },
+    {
+        "author": "0016_Deep_purple",
+        "song": "Smoke_on_the_water",
+        "source": "https://www.youtube.com/watch?v=zUwEIt9ez7M",
+        "offset": "43"
+    },
+    {
+        "author": "0017_Дэцл",
+        "song": "Вечеринка",
+        "source": "https://www.youtube.com/watch?v=NU-XAxBkEaE",
+        "offset": "22"
+    },
+    {
+        "author": "0018_Madcon",
+        "song": "Beggin",
+        "source": "https://www.youtube.com/watch?v=_PrSxoMJPL8",
+        "offset": "1"
+    },
+    {
+        "author": "0019_Boney_M",
+        "song": "Rasputin",
+        "source": "https://www.youtube.com/watch?v=Nl_Eo2QzqU4",
+        "offset": "43.5"
+    },
+    {
+        "author": "0020_Metallica",
+        "song": "Enter_sandman",
+        "source": "https://www.youtube.com/watch?v=o3RnYlBfaSo",
+        "offset": "63"
+    },
+    {
+        "author": "0021_Мальчишник",
+        "song": "Секс_без_перерыва",
+        "source": "https://www.youtube.com/watch?v=osNuCid0iJo",
+        "offset": "3"
+    },
+    {
+        "author": "0022_Cardigans",
+        "song": "My_favorite_game",
+        "source": "https://www.youtube.com/watch?v=r_66UZkBBfY",
+        "offset": "0.5"
+    },
+    {
+        "author": "0023_Billy_idol",
+        "song": "Rebel_Yell",
+        "source": "https://www.youtube.com/watch?v=ESIKf_wtLnM",
+        "offset": 0
+    },
+    {
+        "author": "0024_Britney_Spears",
+        "song": "Toxic",
+        "source": "https://www.youtube.com/watch?v=tVdr_JWmnsA",
+        "offset": 0
+    },
+    {
+        "author": "0025_Лигалайз",
+        "song": "Будущие_мамы",
+        "source": "https://www.youtube.com/watch?v=BG4tFDgOGpI",
+        "offset": "26.5"
+    },
+    {
+        "author": "0026_Cher",
+        "song": "Believe",
+        "source": "https://www.youtube.com/watch?v=safkWMNJdDg",
+        "offset": "15"
+    },
+    {
+        "author": "0027_Red_Hot_Chili_Peppers",
+        "song": "Get_on_top",
+        "source": "https://www.youtube.com/watch?v=NJnOl3trYW0",
+        "offset": 0
+    },
+    {
+        "author": "0028_Akon_and_Eminem",
+        "song": "Smack_that",
+        "source": "https://www.youtube.com/watch?v=j70MeSY8tTg",
+        "offset": 0
+    },
+    {
+        "author": "0029_Fatboy_Slim",
+        "song": "Praise_you",
+        "source": "https://www.youtube.com/watch?v=iPo7y_8AocI",
+        "offset": "9"
+    },
+    {
+        "author": "0030_Дельфин",
+        "song": "Весна",
+        "source": "https://www.youtube.com/watch?v=P47V4SASwGc",
+        "offset": "37.8"
+    },
+    {
+        "author": "0031_Kosheen",
+        "song": "Suicide",
+        "source": "https://www.youtube.com/watch?v=UIYXgs3beiQ",
+        "offset": 0
+    },
+    {
+        "author": "0032_Lou_Bega",
+        "song": "Mambo_n5",
+        "source": "https://www.youtube.com/watch?v=YeqOLxRDsV8",
+        "offset": "6.5"
+    },
+    {
+        "author": "0033_Scooter",
+        "song": "Fire",
+        "source": "https://www.youtube.com/watch?v=q8rOztUuNQQ",
+        "offset": "0.5"
+    },
+    {
+        "author": "0034_Skrillex_Damian_Marley",
+        "song": "Make_it_bun_dem",
+        "source": "https://www.youtube.com/watch?v=PR_u9rvFKzE",
+        "offset": "13"
+    },
+    {
+        "author": "0035_Мумий_тролль",
+        "song": "Невеста",
+        "source": "https://www.youtube.com/watch?v=NpT8j91uIdw",
+        "offset": 0
+    },
+    {
+        "author": "0036_Михаил_Гребенщиков(за_Бориса_минус_балл)",
+        "song": "Булки",
+        "source": "https://www.youtube.com/watch?v=5-jQmYhITZg",
+        "offset": 0
+    },
+    {
+        "author": "0037_Smash_mouth",
+        "song": "All_star",
+        "source": "https://www.youtube.com/watch?v=z9aW_0hkoYo",
+        "offset": 0
+    },
+    {
+        "author": "0038_Captain_Jack",
+        "song": "Captain_Jack",
+        "source": "https://www.youtube.com/watch?v=cRujG_K-lzk",
+        "offset": "14"
+    },
+    {
+        "author": "0039_Pitbul",
+        "song": "Dont_stop_the_party",
+        "source": "https://www.youtube.com/watch?v=pz4Gd_u98ok",
+        "offset": "15"
+    },
+    {
+        "author": "0040_Lorde",
+        "song": "Royals",
+        "source": "https://www.youtube.com/watch?v=ncgsL1GCFms",
+        "offset": 0
+    },
+    {
+        "author": "0041_Depeche_mode",
+        "song": "Personal_jesus",
+        "source": "https://www.youtube.com/watch?v=pm3sP0n7F-M",
+        "offset": "4"
+    },
+    {
+        "author": "0042_Snoop_dog_and_Pharell_Williams",
+        "song": "Drop_it_like_its_hot",
+        "source": "https://www.youtube.com/watch?v=_5AbzGQk5EU",
+        "offset": 0
+    },
+    {
+        "author": "0043_Звери",
+        "song": "Районы_кварталы",
+        "source": "https://www.youtube.com/watch?v=A3Pa4LnCW20",
+        "offset": "1"
+    },
+    {
+        "author": "0044_Руки_вверх",
+        "song": "ай_ай_ай",
+        "source": "https://www.youtube.com/watch?v=11ymi0FmBUw",
+        "offset": 0
+    },
+    {
+        "author": "0045_LMFAO",
+        "song": "Sexy_and_i_know_it",
+        "source": "https://www.youtube.com/watch?v=sO2c7ygb5P4",
+        "offset": 0
+    },
+    {
+        "author": "0046_Ricky_Martin",
+        "song": "Livin_la_vida_loca",
+        "source": "https://www.youtube.com/watch?v=ltRgb4SJ1uk",
+        "offset": "0.5"
+    },
+    {
+        "author": "0047_Timbaland_Timberlake_Nelly_Furtado",
+        "song": "Give_it_to_me",
+        "source": "https://www.youtube.com/watch?v=KvgPk_4H5B8",
+        "offset": "12.5"
+    },
+    {
+        "author": "0048_Abba",
+        "song": "Money",
+        "source": "https://www.youtube.com/watch?v=aaktsSampdY",
+        "offset": 0
+    },
+    {
+        "author": "0049_Foo_fighters",
+        "song": "Pretender",
+        "source": "https://www.youtube.com/watch?v=SBjQ9tuuTJQ",
+        "offset": "33.5"
+    },
+    {
+        "author": "0050_Robie_Williams",
+        "song": "Party_like_a_russian",
+        "source": "https://www.youtube.com/watch?v=MdYGQ7B0Vew",
+        "offset": "8.5"
+    },
+    {
+        "author": "0051_Korn",
+        "song": "Word_Up",
+        "source": "https://www.youtube.com/watch?v=-M7vOnlcLbo",
+        "offset": "8.5"
+    },
+    {
+        "author": "0052_NWA",
+        "song": "Straight_outta_comptonудалить",
+        "source": "https://www.youtube.com/watch?v=TMZi25Pq3T8",
+        "offset": "5"
+    },
+    {
+        "author": "0053_Guano_Apes",
+        "song": "Big_in_japan",
+        "source": "https://www.youtube.com/watch?v=Q9jJufz9RNE",
+        "offset": 0
+    },
+    {
+        "author": "0054_Village_People",
+        "song": "YMCA",
+        "source": "https://www.youtube.com/watch?v=CS9OO0S5w2k",
+        "offset": 0
+    },
+    {
+        "author": "0055_ГРОБ",
+        "song": "Всё_идёт_по_плану",
+        "source": "https://www.youtube.com/watch?v=y3Tpm1LyXfM",
+        "offset": 0
+    },
+    {
+        "author": "0056_Daft_Punk_&_Pharell_Williams",
+        "song": "Get_Lucky",
+        "source": "https://www.youtube.com/watch?v=CCHdMIEGaaM",
+        "offset": 0
+    },
+    {
+        "author": "0057_Rihanna",
+        "song": "Shut_up_and_drive",
+        "source": "https://www.youtube.com/watch?v=up7pvPqNkuU",
+        "offset": "31"
+    },
+    {
+        "author": "0058_Chemical_Brothers",
+        "song": "Do_it_again",
+        "source": "https://www.youtube.com/watch?v=fpNrYyGdi84",
+        "offset": "85"
+    },
+    {
+        "author": "0059_Каста",
+        "song": "Вокруг_шум",
+        "source": "https://www.youtube.com/watch?v=ckqB4idnj-E",
+        "offset": 0
+    },
+    {
+        "author": "0060_Jane_air",
+        "song": "Junk",
+        "source": "https://www.youtube.com/watch?v=DtdLwNYOVVQ",
+        "offset": "16"
+    },
+    {
+        "author": "0061_Two_unlimited",
+        "song": "No_limit",
+        "source": "https://www.youtube.com/watch?v=r6FVk2k4qsM",
+        "offset": "44.5"
+    },
+    {
+        "author": "0062_Garbage",
+        "song": "The_world_is_not_enough",
+        "source": "https://www.youtube.com/watch?v=VBRXsAWBgFA",
+        "offset": "3"
+    },
+    {
+        "author": "0063_George_Michael",
+        "song": "Freeek!",
+        "source": "https://www.youtube.com/watch?v=DeT8k968xKA",
+        "offset": "28"
+    },
+    {
+        "author": "0064_Matrang",
+        "song": "Meduza",
+        "source": "https://www.youtube.com/watch?v=kacHLh3fPpg",
+        "offset": "8"
+    },
+    {
+        "author": "0065_Shaggy",
+        "song": "Mr_Bombastic",
+        "source": "https://www.youtube.com/watch?v=iNwSpoXnvWM",
+        "offset": "14.5"
+    },
+    {
+        "author": "0066_Beyonce",
+        "song": "Crazy_in_love",
+        "source": "https://www.youtube.com/watch?v=ViwtNLUqkMY",
+        "offset": "14.8"
+    },
+    {
+        "author": "0067_50_cent",
+        "song": "pimp",
+        "source": "https://www.youtube.com/watch?v=Jy1D6caG8nU",
+        "offset": 0
+    },
+    {
+        "author": "0068_Blur",
+        "song": "Song_2",
+        "source": "https://www.youtube.com/watch?v=eXS89RFUlOY",
+        "offset": 0
+    },
+    {
+        "author": "0069_Face2Face",
+        "song": "Кошка",
+        "source": "https://www.youtube.com/watch?v=3msDDeXrplI",
+        "offset": 0
+    },
+    {
+        "author": "0070_Vacuum",
+        "song": "I_breath",
+        "source": "https://www.youtube.com/watch?v=gdcv7Shi9rM",
+        "offset": "0.5"
+    },
+    {
+        "author": "0071_Король_и_шут",
+        "song": "Прыгну_со_скалы",
+        "source": "https://www.youtube.com/watch?v=7HYcLccP77Y",
+        "offset": 0
+    },
+    {
+        "author": "0072_HIM",
+        "song": "Wicked_game",
+        "source": "https://www.youtube.com/watch?v=8oYodfK4DkE",
+        "offset": 0
+    },
+    {
+        "author": "0073_Pink",
+        "song": "Get_the_party_started",
+        "source": "https://www.youtube.com/watch?v=mW1dbiD_zDk",
+        "offset": "23.5"
+    },
+    {
+        "author": "0074_Bloodhound_Gang",
+        "song": "The_Ballad_of_Chasey_Lain",
+        "source": "https://www.youtube.com/watch?v=If9fC9aJd-U",
+        "offset": "3.5"
+    },
+    {
+        "author": "0075_Aqua",
+        "song": "Dr_jones",
+        "source": "https://www.youtube.com/watch?v=9juUKggexbY",
+        "offset": "25.5"
+    },
+    {
+        "author": "0076_Doors",
+        "song": "Light_my_fire",
+        "source": "https://www.youtube.com/watch?v=cq8k-ZbsXDI",
+        "offset": "0.5"
+    },
+    {
+        "author": "0077_Пика",
+        "song": "Патимейкер",
+        "source": "https://www.youtube.com/watch?v=n-jVNxIhY6M",
+        "offset": "8"
+    },
+    {
+        "author": "0078_Offspring",
+        "song": "Want_you_bad",
+        "source": "https://www.youtube.com/watch?v=_g19fCJotPc",
+        "offset": 0
+    },
+    {
+        "author": "0079_Old_Dirty_Bastard",
+        "song": "Shimmy_shimmy_ya",
+        "source": "https://www.youtube.com/watch?v=h2zgB93KANE",
+        "offset": "3.5"
+    },
+    {
+        "author": "0080_Lady_gaga",
+        "song": "Poker_Face",
+        "source": "https://www.youtube.com/watch?v=bESGLojNYSo",
+        "offset": "1"
+    },
+    {
+        "author": "0081_Weekend",
+        "song": "Blinding_lights",
+        "source": "https://www.youtube.com/watch?v=fHI8X4OXluQ",
+        "offset": "6"
+    },
+    {
+        "author": "0082_Gala",
+        "song": "Freed_from_desire",
+        "source": "https://www.youtube.com/watch?v=p3l7fgvrEKM",
+        "offset": 0
+    },
+    {
+        "author": "0083_Status_Quo",
+        "song": "In_the_army_now",
+        "source": "https://www.youtube.com/watch?v=EIxsPBbZ_b8",
+        "offset": "7.5"
+    },
+    {
+        "author": "0084_Black_eyed_peas",
+        "song": "My_humps",
+        "source": "https://www.youtube.com/watch?v=iEe_eraFWWs",
+        "offset": "1"
+    },
+    {
+        "author": "0085_Adele",
+        "song": "Rolling_in_the_deep",
+        "source": "https://www.youtube.com/watch?v=NXXT9RFKO5E",
+        "offset": "2"
+    },
+    {
+        "author": "0086_Black_Sabbath",
+        "song": "Paranoid",
+        "source": "https://www.youtube.com/watch?v=0qanF-91aJo",
+        "offset": "5.5"
+    },
+    {
+        "author": "0087_Чичерина",
+        "song": "Тулула",
+        "source": "https://www.youtube.com/watch?v=o2xujSkBmOA",
+        "offset": "7"
+    },
+    {
+        "author": "0088_Madonna",
+        "song": "Music",
+        "source": "https://www.youtube.com/watch?v=5jVlK3aOPII",
+        "offset": "16.5"
+    },
+    {
+        "author": "0089_Limp_Bizkit",
+        "song": "Rollin",
+        "source": "https://www.youtube.com/watch?v=RsXEbqS7cpE",
+        "offset": "8.5"
+    },
+    {
+        "author": "0090_Moby",
+        "song": "Lift_me_up",
+        "source": "https://www.youtube.com/watch?v=pFDu3Iu4WVA",
+        "offset": "1"
+    },
+    {
+        "author": "0091_Aerosmith",
+        "song": "Crazy",
+        "source": "https://www.youtube.com/watch?v=2KBBbSTQf6U",
+        "offset": 0
+    },
+    {
+        "author": "0092_Lil_John_&_the_eastside_boys",
+        "song": "Get_Low",
+        "source": "https://www.youtube.com/watch?v=DKoY1fw7yCo",
+        "offset": 0
+    },
+    {
+        "author": "0093_БИ2",
+        "song": "Дурочка",
+        "source": "https://www.youtube.com/watch?v=Bq7KKq7sENI",
+        "offset": "22"
+    },
+    {
+        "author": "0094_Beastie_Boys",
+        "song": "Intergalactic",
+        "source": "https://www.youtube.com/watch?v=ln-Jq6X6p-g",
+        "offset": "30.8"
+    },
+    {
+        "author": "0095_Eminem",
+        "song": "Without_me",
+        "source": "https://www.youtube.com/watch?v=ZbytR2avo-0",
+        "offset": "47.5"
+    },
+    {
+        "author": "0096_Green_day",
+        "song": "American_idiot",
+        "source": "https://www.youtube.com/watch?v=a1BS7XnEZqc",
+        "offset": 0
+    },
+    {
+        "author": "0097_Rasmus",
+        "song": "In_the_shadows",
+        "source": "https://www.youtube.com/watch?v=7gwO8-oqwFw",
+        "offset": "2.5"
+    },
+    {
+        "author": "0098_Rammstein",
+        "song": "Sonne",
+        "source": "https://www.youtube.com/watch?v=TQv7UbY7RXo",
+        "offset": "4"
+    },
+    {
+        "author": "0099_Bon_Jovi",
+        "song": "Its_my_life",
+        "source": "https://www.youtube.com/watch?v=rcq_mlS1DAU",
+        "offset": "0.5"
+    },
+    {
+        "author": "0100_Cypress_hill",
+        "song": "Hits_from_the_bong",
+        "source": "https://www.youtube.com/watch?v=eMK4cfXj5c0",
+        "offset": "24"
+    },
+    {
+        "author": "0101_Агата_Кристи",
+        "song": "Секрет",
+        "source": "https://www.youtube.com/watch?v=v4s68ZhZAPA",
+        "offset": "41"
+    },
+    {
+        "author": "0102_Pendulum",
+        "song": "Tarantula",
+        "source": "https://www.youtube.com/watch?v=3ZR2p-DhSX4",
+        "offset": 0
+    },
+    {
+        "author": "0103_Sum41",
+        "song": "Still_waiting",
+        "source": "https://www.youtube.com/watch?v=Lz7kvJdwPOY",
+        "offset": "0.5"
+    },
+    {
+        "author": "0104_Blink182",
+        "song": "Whats_my_age_again",
+        "source": "https://www.youtube.com/watch?v=7OU7SktlXfA",
+        "offset": 0
+    },
+    {
+        "author": "0105_JLo",
+        "song": "Jenny_from_the_block",
+        "source": "https://www.youtube.com/watch?v=8nCswWuyShg",
+        "offset": "31"
+    },
+    {
+        "author": "0106_Nickelback",
+        "song": "How_you_remind_me",
+        "source": "https://www.youtube.com/watch?v=Aiay8I5IPB8",
+        "offset": "3"
+    },
+    {
+        "author": "0107_Marilyn_Manson",
+        "song": "Rock_is_dead",
+        "source": "https://www.youtube.com/watch?v=iVlu676mODc",
+        "offset": "3"
+    },
+    {
+        "author": "0108_White_Stripes",
+        "song": "Seven_Nation_Army",
+        "source": "https://www.youtube.com/watch?v=0J2QdDbelmY",
+        "offset": "2.8"
+    },
+    {
+        "author": "0109_Christina_Aguilera",
+        "song": "Genie_in_a_bottle",
+        "source": "https://www.youtube.com/watch?v=Iu7Ixskp0dY",
+        "offset": "1.5"
+    },
+    {
+        "author": "0110_E-Type",
+        "song": "Angels_Crying",
+        "source": "https://www.youtube.com/watch?v=8Uu6rhtJhz0",
+        "offset": 0
+    },
+    {
+        "author": "0111_Pink_Floys",
+        "song": "Another_brick_in_the_wall",
+        "source": "https://www.youtube.com/watch?v=5IpYOF4Hi6Q",
+        "offset": 0
+    },
+    {
+        "author": "0112_Гуф",
+        "song": "Сплетни",
+        "source": "https://www.youtube.com/watch?v=b2KLSLX6TZs",
+        "offset": "11"
+    },
+    {
+        "author": "0113_Guns_and_roses",
+        "song": "You_could_be_mine",
+        "source": "https://www.youtube.com/watch?v=DVzcQ4_khsM",
+        "offset": "52"
+    }
+]

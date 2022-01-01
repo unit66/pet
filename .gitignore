@@ -62,5 +62,7 @@ typings/
 
 \.idea/
 
+\ffmpeg
+
 package-lock.json
 client/package-lock.json
