@@ -7,7 +7,8 @@ const Application = () => {
     return (
         <main>
             <Switch>
-                <Route exact path="/" component={Home} />
+                <Route exact path="/game1" component={Home} />
+                <Route exact path="/" component={P404} />
                 <Route path="*" component={P404} />
             </Switch>
         </main>

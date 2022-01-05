@@ -18,10 +18,10 @@ const Home = () => {
         offset: 0
     });
     const [players, setPlayers] = useState([
-        // {name: 'Слава', score: 0},
-        // {name: 'Алёна', score: 0},
-        // {name: 'Надя', score: 0},
-        // {name: 'Никита', score: 0},
+        {name: 'Слава', score: 0},
+        {name: 'Алёна', score: 0},
+        {name: 'Надя', score: 0},
+        {name: 'Никита', score: 0},
     ]);
     const [newPlayer, setNewPlayer] = useState('');
 
