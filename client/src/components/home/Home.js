@@ -10,6 +10,7 @@ const Home = () => {
     const pending = useSelector(state => state.home.pending);
     const [src, setSrc] = useState('');
     const [endTime, setEndTime] = useState(0);
+    const [editMode, setEditMode] = useState(false);
     const [showForm, setShowForm] = useState(false);
     const [newSong, setNewSong] = useState({
         source: '',
@@ -61,7 +62,7 @@ const Home = () => {
                 <div className="pending">
                     <img src="img/loader.gif" alt=""/>
                 </div>
-            ) }
+            ) }    
             <section className="players">
                 { players.map((player, index) => (
                     <div className={`player${index === 0 ? ' leader' : ''}`}>
@@ -78,17 +79,21 @@ const Home = () => {
                         }}/>
                     </div>
                 )) }
-                <div className="addPlayers">
-                    <input type="text" value={newPlayer} onChange={e => setNewPlayer(e.target.value)}/>
-                    <button className="add" onClick={() => {
-                        setPlayers([...players, { name: newPlayer, score: 0 }])
-                        setNewPlayer('');
-                    }}>+</button>
-                </div>
+                { editMode && (
+                    <div className="addPlayers">
+                        <input type="text" value={newPlayer} onChange={e => setNewPlayer(e.target.value)}/>
+                        <button className="add" onClick={() => {
+                            setPlayers([...players, { name: newPlayer, score: 0 }])
+                            setNewPlayer('');
+                        }}>+</button>
+                    </div>
+                ) }
                 <hr/>
             </section>
             <section className="content">
-                {/* <h4 onClick={() => setShowForm(true)}>добавить песню</h4> */}
+                { editMode && (
+                    <h4 onClick={() => setShowForm(true)}>добавить песню</h4>
+                )}
                 <div className={`form ${showForm && 'open'}`}>
                     <div className="formWrapper">
                         <span onClick={() => setShowForm(!showForm)}>закрыть</span>
@@ -104,7 +109,7 @@ const Home = () => {
                     </div>
                 </div>
                 <Player src={src} endTime={endTime} />
-                <hr />
+                
                 <div className="songs">
                     { songs.map((song, index) => (
                         <Song
@@ -117,11 +122,14 @@ const Home = () => {
                             deleteSong={() => emmitDeleteSong(song)}
                             setSrc={setSrc}
                             setEndTime={setEndTime}
+                            editMode={editMode}
                         />
                     ))
                     }
                 </div>
             </section>
+            <hr />
+            <span onClick={() => setEditMode(!editMode)} style={{float: 'right'}}>editMode</span>
         </section>
     );
 };

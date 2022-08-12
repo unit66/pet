@@ -780,15 +780,37 @@ h5 {
 }
 
 .song{
+  user-select: none;
+  div.times {
+    width: fit-content;
+    display: grid;
+    grid-auto-flow: column;
+    padding: 0 5px;
+    background-color: lighten($grey, 15%);
+    border-radius: 10px;
+    box-sizing: content-box;
+    span{
+      cursor: pointer;
+      display: block;
+      text-align: center;
+      min-width: 20px;
+      padding: 5px 5px;
+      border-radius: 10px;
+      transition: all .5s ease-in-out;
+    }
+    span.currentTime{
+      background-color: $teal;
+    }
+  }
   padding: 10px 10px 5px 10px;
   margin-bottom: 2px;
   border-radius: 5px;
   hr{
     margin: 2px;
   }
-  &.solved{
-    background-color: goldenrod;
-  }
+  // &.solved{
+  //   background-color: goldenrod;
+  // }
 }
 
 span{

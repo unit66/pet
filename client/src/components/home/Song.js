@@ -18,8 +18,8 @@ const Song = (props) => {
         90
     ];
 
-    const changeTime = () => {
-        const nextTime = times[times.indexOf(time) + 1] || 1;
+    const changeTime = (nextTime) => {
+        //const nextTime = times[times.indexOf(time) + 1] || 1;
         setTime(nextTime);
         props.setSrc(`songs/${props.author}/${props.name}/90.mp3`);
         props.setEndTime(nextTime);
@@ -32,14 +32,14 @@ const Song = (props) => {
                 <>
                     <h6>{props.index}.</h6>
                     <h1>
-                        <span onClick={() => setShowAuthor(!showAuthor)}>
-                            { showAuthor ? props.author : '*****' }
+                        <span onDoubleClick={() => setShowAuthor(!showAuthor)}>
+                            { showAuthor ? props.author : '☆☆☆☆☆' }
                         </span>
                     </h1>
                     <small>-</small>
                     <h2>
-                        <span onClick={() => setShowName(!showName)}>
-                            { showName ? props.name : '*****' }
+                        <span onDoubleClick={() => setShowName(!showName)}>
+                            { showName ? props.name : '☆☆☆☆☆' }
                         </span>
                     </h2>
                 </>
@@ -47,10 +47,12 @@ const Song = (props) => {
             { solved && (
                 <>
                     <h3>{props.index}. </h3>
-                    <span onClick={() => setSolved(!solved)}>SOLVED</span>
+                    <span onClick={() => setSolved(!solved)}>⭐⭐⭐⭐⭐ УГАДАНО!!! ⭐⭐⭐⭐⭐</span>
                 </>
             )}
-            {/* <h5 onClick={() => {props.deleteSong()}}>удалить</h5> */}
+            { props.editMode && (
+                <h5 onClick={() => {props.deleteSong()}}>удалить</h5>
+            ) }
             <br/>
             {/*{ showAuthor && showName && (*/}
             {/*    <>*/}
@@ -60,17 +62,18 @@ const Song = (props) => {
             {/*) }*/}
             { time === 0 && !solved && (
             <>
-                <span onClick={changeTime} style={{"color":"#95a3b3", "cursor": "pointer"}}>PLAY</span>
+                <span onClick={() => changeTime(1)} style={{"color":"#95a3b3", "cursor": "pointer"}}>PLAY</span>
                 <br />
             </>
             )}
             { time !== 0 && !solved && (
                 <>
-                    <b><span style={{"color":"#69b593"}}>{ time }</span> sec - </b>
-                    <span onClick={changeTime} style={{"color":"#ff3838", "cursor": "pointer"}}>more</span>
-                    <br />
-                    <span className="not-solved" onClick={() => setSolved(!solved)}>solved</span>
-                    <br />
+                    <div className='times'>
+                        {
+                            times.map(timeValue => (<span onClick={() => changeTime(timeValue)} className={time === timeValue ? 'currentTime' : '' }>{ timeValue }</span>))
+                        }
+                    </div>
+                    <span className="not-solved" onClick={() => setSolved(!solved)}>угадано</span>
                 </>
             )}
             <hr/>
